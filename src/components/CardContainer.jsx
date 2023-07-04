@@ -14,12 +14,12 @@ export default function CardContainer() {
   }, []);
   return (
     <div>
-      <div>
+      <div className="flex justify-around">
         <div>
           {data &&
             data.map((item, index) => (
               <ul key={index} onClick={() => setSingle(item)}>
-                <li className="py-3 border px-5">{item.Name}</li>
+                <li className="py-3 border px-5 cursor-pointer">{item.Name}</li>
               </ul>
             ))}
         </div>
