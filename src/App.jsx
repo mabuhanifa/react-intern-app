@@ -1,13 +1,9 @@
-import { useEffect, useState } from "react";
+import CardContainer from "./components/CardContainer";
 
 export default function App() {
-  const [data, setData] = useState([]);
-  console.log(data);
-  useEffect(() => {
-    (async () => {
-      const res = await fetch("./src/data/data.json");
-      setData(await res.json());
-    })();
-  }, []);
-  return <div>App</div>;
+  return (
+    <div className="p-10">
+      <CardContainer />
+    </div>
+  );
 }
